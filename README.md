@@ -3,7 +3,7 @@
 A REST API example made using express and a good folder structure
 
 Folder Structure
-
+```
 .
 ├── ...
 ├── package.json
@@ -25,6 +25,6 @@ Folder Structure
 │   │   └── ...     
 │   └── ...                 
 └── ...
-
+```
 
 Using this folder structure will ensure your project to be scalable and easily for maintaining and adding stuff also makes easy to get new people into it, designed to be stable through time.
