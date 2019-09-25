@@ -39,8 +39,8 @@ module.exports = {
         if(name && email)
             usersModel.addUser(name, email)
             .then(data => {
-                if(data.insertedId > 0)
-                    res.json({msg: 'Users added, returning added user id', data: data.insertedId});
+                if(data.insertId > 0)
+                    res.json({msg: 'Users added, returning added user id', data: data.insertId});
                 else
                     res.json({msg: 'Something is clearly wrong', data});
             })

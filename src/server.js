@@ -26,8 +26,8 @@ app.use(express.urlencoded( { extended: true, limit: '10mb' } ));
 app.use(cookieParser());
 app.use(morgan(config.app.logFormat));
 
+// This middleware adds the json header to every response
 app.use('*', (req, res, next) => {
-    // All responses will be json unless told otherwise
     res.setHeader('Content-Type', 'application/json');
     next();
 })
