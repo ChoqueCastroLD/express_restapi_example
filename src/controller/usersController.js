@@ -1,4 +1,4 @@
-const usersModel = require('../model/users.js');
+const usersModel = require('../model/usersModel.js');
 const httpStatus = require('http-status')
 module.exports = {
     getUserById(req, res){

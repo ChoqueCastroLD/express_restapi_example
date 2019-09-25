@@ -9,20 +9,19 @@ Folder Structure
 ├── package.json
 ├── src                         # Source folder
 │   ├── server.js               # Main file, contains server stuff
-│   ├── v1                      # Versioned API folder for easy scaling
-│   │   ├── config              # Configurations folder
-│   │   │   ├── config.js       # Configuration file
-│   │   └── ...
-│   │   ├── model               # Models folder
-│   │   │   ├── database.js     # Contains database connection logic
-│   │   │   ├── users.js        # Example Users Model
-│   │   └── ...     
-│   │   ├── controller          # Controllers folder
-│   │   │   ├── users.js        # Example Users Controller
-│   │   └── ...     
-│   │   ├── routes              # Routes folder
-│   │   │   ├── users.js        # Example Users related Routes
-│   │   └── ...     
+│   ├── config                  # Configurations folder
+│   │   ├── config.js           # Configuration file
+│   └── ...
+│   ├── model                   # Models folder
+│   │   ├── database.js         # Contains database connection logic
+│   │   ├── users.js            # Example Users Model
+│   └── ...     
+│   ├── controller              # Controllers folder
+│   │   ├── users.js            # Example Users Controller
+│   └── ...     
+│   ├── routes                  # Routes folder
+│   │   ├── router.js           # Main Router 
+│   │   ├── users.js            # Example Users related Routes
 │   └── ...                 
 └── ...
 ```

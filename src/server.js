@@ -4,10 +4,14 @@ const express = require('express');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 
+// Load .env Enviroment Variables to process.env
+
+require('dotenv').config();
+
 
 // Load config
 
-const config = require('./v1/config/config.js');
+const config = require('./config/config.js');
 
 
 // Instantiate an Express Application
@@ -28,14 +32,14 @@ app.use('*', (req, res, next) => {
     next();
 })
 
-// Assign Main Routes
+// Assign Routes
+app.use('/', require('./routes/router.js'));
 
-app.use('/v1/users', require('./v1/routes/users.js'));
-
+// Handle not valid route
 app.use('*', (req, res) => {
     res
     .status(404)
-    .json( {msg: 'Not valid endpoint'} );
+    .json( {msg: 'Endpoint Not Found'} );
 })
 
 // Open Server on configurated Port
