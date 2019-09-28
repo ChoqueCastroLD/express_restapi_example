@@ -5,12 +5,17 @@ const pool  = mysql.createPool(config.mysql);
 
 module.exports = {
 
+    /** Do a query to the database, returns a result or an error */
     query(queryString = '', inputData = []){
         return new Promise( (resolve, reject) => {
+
             pool.query(queryString, inputData, function (error, results) {
-                if (error) return reject({errno: error.errno, code: error.code});
-                else return resolve(results);
+                if (error)
+                    reject({errno: error.errno, code: error.code});
+                else
+                    resolve(results);
             } );
+
         })
     }
 
